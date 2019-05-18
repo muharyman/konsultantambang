@@ -16,10 +16,19 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'admin'], function () use ($router) { 
-    $router->get('/album/create', 'AlbumController@create');
-    $router->get('/album/update/{id}', 'AlbumController@update');
-    $router->get('/album/delete/{id}', 'AlbumController@destroy');
+    $router->group(['prefix' => 'album'], function () use ($router) { 
+        $router->post('/create', 'AlbumController@create');
+        $router->post('/update/{id}', 'AlbumController@update');
+        $router->delete('/delete/{id}', 'AlbumController@destroy');
+    });
+    $router->group(['prefix' => 'article'], function () use ($router) { 
+        // $router->post('/create', 'ArticleController@create');
+        // $router->post('/update/{id}', 'ArticleController@update');
+        // $router->delete('/delete/{id}', 'ArticleController@destroy');
+    });
 });
 
-$router->get('/album', 'AlbumController@index');
-$router->get('/album/{id}', 'AlbumController@show');
+$router->group(['prefix' => 'album'], function () use ($router) { 
+    $router->get('/', 'AlbumController@index');
+    $router->get('/{id}', 'AlbumController@show');
+});
