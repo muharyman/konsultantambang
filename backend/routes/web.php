@@ -14,3 +14,12 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'admin'], function () use ($router) { 
+    $router->get('/album/create', 'AlbumController@create');
+    $router->get('/album/update/{id}', 'AlbumController@update');
+    $router->get('/album/delete/{id}', 'AlbumController@destroy');
+});
+
+$router->get('/album', 'AlbumController@index');
+$router->get('/album/{id}', 'AlbumController@show');
