@@ -15,12 +15,10 @@ class AlbumController extends Controller
     public function index()
     {
         $albums = Album::select('id', 'path', 'desc')->get();
-        if (count($albums))
-        {
+        if (count($albums)) {
             return $albums;
         }
-        else
-        {
+        else {
             return 0;
         }
     }
@@ -28,12 +26,10 @@ class AlbumController extends Controller
     public function show($id)
     {
         $album = Album::select('id', 'path', 'desc')->where('id', $id)->first();
-        if ($album)
-        {
+        if ($album) {
             return $album;
         }
-        else
-        {
+        else {
             return 0;
         }
     }
