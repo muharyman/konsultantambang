@@ -50,11 +50,11 @@ class AlbumController extends Controller
             $destinationPath = public_path('/images');
             $image->move($destinationPath, $name);
             
-            $content = new Album;
-            $content->path = $name;
-            $content->desc = $request->input('album-desc'); 
+            $album = new Album;
+            $album->path = $name;
+            $album->desc = $request->input('album-desc'); 
             
-            if ($content->save()) {
+            if ($album->save()) {
                 return 1;
             }
             else {
@@ -68,15 +68,15 @@ class AlbumController extends Controller
 
     public function update(Request $request, $id)
     {
-        $content = Album::findOrFail($id);
-        if ($content) {
+        $album = Album::findOrFail($id);
+        if ($album) {
             if ($request->hasFile('album-photo')) {
                 $this->validate($request, [
                     'album-photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
                 ]);
                 
                 // unlink or remove previous image from folder
-                $oldImage = public_path('/images') . '/' . $content->path;
+                $oldImage = public_path('/images') . '/' . $album->path;
                 if (File::exists($oldImage)) {
                     unlink($oldImage);
                 }
@@ -86,12 +86,12 @@ class AlbumController extends Controller
                 $destinationPath = public_path('/images');
                 $image->move($destinationPath, $name);
 
-                $content->path = $name;
+                $album->path = $name;
             }
 
-            $content->desc = $request->input('album-desc');
+            $album->desc = $request->input('album-desc');
 
-            if ($content->save()) {
+            if ($album->save()) {
                 return 1;
             }
             else {
