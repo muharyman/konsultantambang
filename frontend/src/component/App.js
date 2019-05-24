@@ -7,6 +7,7 @@ import ImageSlider from './ImageSlider';
 import Slider from './Slider';
 import Footer from './Footer';
 import ProductSection from './ProductSection';
+import PictureSection from './PictureSection';
 
 class App extends Component {
   render(){
@@ -17,6 +18,7 @@ class App extends Component {
         <ImageSlider/>
         <ProductSection />
         <Home></Home>
+        <PictureSection />
         <Footer />
       </div>
     );
