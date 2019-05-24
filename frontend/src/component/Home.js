@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './Home.css';
 import $ from 'jquery';

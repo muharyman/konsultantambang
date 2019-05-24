@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Component } from 'react';
 import './ImageSlider.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -15,13 +14,13 @@ class ImageSlider extends Component{
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img class="d-block w-100" src="..." alt="First slide"/>
+                    <img class="d-block w-100" src="https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg" alt="First slide"/>
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide"/>
+                    <img class="d-block w-100" src="https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg" alt="Second slide"/>
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide"/>
+                    <img class="d-block w-100" src="https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg" alt="Third slide"/>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
