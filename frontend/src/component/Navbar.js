@@ -7,7 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 class Navbar extends Component{
     render(){
         return(
-            <header>    
+            <header>
                 <nav className=" navbar fixed-top navbar-expand-lg navbar-light bg-dark">
                     <a className="navbar-brand" href="">
                     <img className="logo" src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizquXdh6fiAhUQP6wKHaw-CWcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.mongabay.co.id%2F2018%2F09%2F12%2Fgubernur-baru-ntt-janjikan-moratorium-tambang-akankah-terwujud%2F&psig=AOvVaw0TT9PoF6C9vMyjMAYD-dXU&ust=1558336965063429"/>
@@ -33,7 +33,7 @@ class Navbar extends Component{
                                 </div>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={"/"}>Foto Kegiatan</a>
+                                <a className="nav-link" href={"/Gallery"}>Foto Kegiatan</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href={"/"}>Tentang</a>
