@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './component/App';
 import * as serviceWorker from './serviceWorker';
+import 'ekko-lightbox';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

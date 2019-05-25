@@ -36,7 +36,7 @@ class Navbar extends Component{
                                 <a className="nav-link" href={"/Gallery"}>Foto Kegiatan</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href={"/"}>Tentang</a>
+                                <a className="nav-link" href={"/"}>Tentang Kami</a>
                             </li>
                             <li className="nav-item">
                                 <i class="fab fa-facebook-f"></i>

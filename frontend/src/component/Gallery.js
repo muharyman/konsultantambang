@@ -3,45 +3,81 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import './Gallery.css';
-import jQuery from 'jquery';
-
-var $ = jQuery.noConflict();
 class Gallery extends Component{
-    componentDidMount(){
-        $(document).on("click", '[data-toggle="lightbox"]', function(event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    }
     render(){
         return(
-            <div class="container">
-                <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded"/>
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded"/>
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded"/>
-                </a>
+        <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="0"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="1"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+2" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="2"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+3" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="3"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+4" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="4"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+5" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="5"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+6" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="6"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+7" className="img-thumbnail my-3"/></a>
+                    </div>
+                    <div className="col-md-2" data-toggle="modal" data-target="#modal">
+                    <a href="#lightbox" data-slide-to="7"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+8" className="img-thumbnail my-3"/></a>
+                    </div>    
                 </div>
-                <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded"/>
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded"/>
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-                    <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded"/>
-                </a>
+            </div>
+            <div className="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Lightbox Gallery by Bootstrap 4" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <div id="lightbox" className="carousel slide" data-ride="carousel" data-interval="5000" data-keyboard="true">
+                                <ol className="carousel-indicators">
+                                    <li data-target="#lightbox" data-slide-to="0"></li>
+                                    <li data-target="#lightbox" data-slide-to="1"></li>
+                                    <li data-target="#lightbox" data-slide-to="2"></li>
+                                    <li data-target="#lightbox" data-slide-to="3"></li>
+                                    <li data-target="#lightbox" data-slide-to="4"></li>
+                                    <li data-target="#lightbox" data-slide-to="5"></li>
+                                    <li data-target="#lightbox" data-slide-to="6"></li>
+                                    <li data-target="#lightbox" data-slide-to="7"></li>
+                                </ol>
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+1" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+2" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+3" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+4" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+5" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+6" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+7" className="w-100"
+                                        alt=""/></div>
+                                    <div className="carousel-item"><img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+8" className="w-100"
+                                        alt=""/></div>
+                                </div>
+                                <a className="carousel-control-prev" href="#lightbox" role="button" data-slide="prev"><span className="carousel-control-prev-icon" aria-hidden="true"></span><span className="sr-only">Previous</span></a>
+                                <a className="carousel-control-next" href="#lightbox" role="button" data-slide="next"><span className="carousel-control-next-icon" aria-hidden="true"></span><span className="sr-only">Next</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          </div>
+            </div> 
+        </div>
         );
     }
 }
-
 
 export default Gallery;
