@@ -3,7 +3,9 @@ const containerFluid = {
     paddingLeft: "15px",
     marginRight: "auto",
     marginLeft: "auto",
-    width: "100%"
+    width: "100%",
+    backgroundColor:"gray",
+    marginBottom:"-2.1vh"
 };
 
 const container = {
@@ -60,11 +62,11 @@ const footerStyle = {
         color: "#FFFFFF"
         }
     },
-    container,
+    containerFluid,
     list: {
         marginBottom: "0",
         padding: "0",
-        marginTop: "0"
+        marginTop: "1vh"
     },
     inlineBlock: {
         display: "inline-block",

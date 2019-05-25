@@ -1,0 +1,20 @@
+.post-content .post-bar li {
+    display: inline-block;
+}
+
+i::after{
+    margin-right: 2vh;
+}
+
+section {
+    float: left;
+    margin: 0 1.5%;
+    width: 63%;
+}
+aside {
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+}
+  
+  

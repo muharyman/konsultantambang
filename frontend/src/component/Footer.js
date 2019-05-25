@@ -21,36 +21,17 @@ function Footer({  ...props }) {
 
     return (
         <footer className={footerClasses}>
-            <div className={classes.container}>
+            <div className={classes.containerFluid}>
                 <div className={classes.left}>
                     <List className={classes.list}>
                         <ListItem className={classes.inlineBlock}>
-                            <a      
-                                // nanti diisi alamat profile page
-                                href="https://www.radiorodja.com"
-                                className={classes.block}
-                                target="_self"
-                            >
-                                About Us
-                            </a>
-                        </ListItem>
-                        <ListItem className={classes.inlineBlock}>
-                            <a  
-                                href="https://www.radiorodja.com/"
-                                className={classes.block}
-                                target="_self"
-                            >
-                                Foto Kegiatan
-                            </a>
-                        </ListItem>
-                        <ListItem className={classes.inlineBlock}>
                             <a
                                 // belum kebayang kebutuhan maupun profil perusahaannya
                                 href="https://www.radiorodja.com"
                                 className={classes.block}
                                 target="_self"
                             >
-                                Facebook
+                                Facebook  <span><i class="fab fa-facebook-f"></i></span>
                             </a>
                         </ListItem>
                         <ListItem className={classes.inlineBlock}>
@@ -60,7 +41,7 @@ function Footer({  ...props }) {
                                 className={classes.block}
                                 target="_self"
                             >
-                                Twitter
+                                Twitter  <span><i className="fab fa-twitter"></i></span>
                             </a>
                         </ListItem>
                         <ListItem className={classes.inlineBlock}>
@@ -70,17 +51,7 @@ function Footer({  ...props }) {
                                 className={classes.block}
                                 target="_self"
                             >
-                                Instagram
-                            </a>
-                        </ListItem>
-                        <ListItem className={classes.inlineBlock}>
-                            <a
-                                // belum kebayang kebutuhan maupun profil perusahaannya
-                                href="https://www.radiorodja.com"
-                                className={classes.block}
-                                target="_self"
-                            >
-                                Kontak Kami
+                                Instagram  <span><i className="fab fa-instagram"></i></span>
                             </a>
                         </ListItem>
                     </List>

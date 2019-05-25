@@ -3,11 +3,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import './Gallery.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
 class Gallery extends Component{
     render(){
         return(
         <div>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-2" data-toggle="modal" data-target="#modal">
                     <a href="#lightbox" data-slide-to="0"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1" className="img-thumbnail my-3"/></a>
@@ -74,7 +76,7 @@ class Gallery extends Component{
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
         );
     }
