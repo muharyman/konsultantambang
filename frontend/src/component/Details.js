@@ -10,15 +10,15 @@ class Details extends Component{
         <div className="container-fluid">
             <div className="row">
                 <div className="col-md-8">
-                    <div className="col-md-3 title">
+                    <div className="title">
                         <h2>Judul</h2>
                     </div>
-                    <div className="post-content">
+                    <div className="post-content text-left">
                         <ul className="post-bar">
                             <li>
-                                <i className="fa fa-calendar"> June 5, 2016 </i> 
-                                <i className="fas fa-eye"> 2013 </i>
-                                <i className="fas comments"> 5 </i>
+                                <i className="properti fa fa-calendar"><p> June 5, 2016</p></i> 
+                                <i className="properti fas fa-eye"><p> 2013</p></i>
+                                <i className="properti fas comments"><p> 5</p></i>
                             </li>
                         </ul>
                     </div>
