@@ -41,7 +41,7 @@ class Navbar extends Component{
                         <hr />
                          <Switch>
                             {/* <Route exact path='/' component={Home} /> */}
-                            <Route path='/gallery' component={Gallery} />
+                            <Route exact path='/gallery' component={Gallery} />
                             <Route path='/about' component={AboutUs} />
                         </Switch> 
 

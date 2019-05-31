@@ -7,6 +7,10 @@ class News extends Component{
         return(
             <div className="demo">
                 <div className="container">
+                    <div className="title text-left">
+                        <h3>Pengurusan Izin</h3>
+                        <hr/>
+                    </div>
                     <div className="row">
                         <div className="post-slide">
                             <div className="post-img">
