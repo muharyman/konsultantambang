@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('path');
             $table->string('title');
             $table->string('content');
-            $table->string('view');
+            $table->integer('view')->unsigned();
             $table->string('category');
             $table->timestamps();
         });
