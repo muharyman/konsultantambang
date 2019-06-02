@@ -6,7 +6,7 @@ class NewsFrom extends Component{
     render(){
         return(
             <div>
-                
+                Ayam
             </div>
         );
     }
