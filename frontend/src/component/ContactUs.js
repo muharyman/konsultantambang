@@ -55,6 +55,10 @@ class ContactUs extends Component{
                         src="https://www.youtube.com/embed/tgbNymZ7vqY">
                     </iframe>
                 </div>
+                <div>
+                <a class="twitter-timeline" data-width="250" data-height="250" href="https://twitter.com/yufid?ref_src=twsrc%5Etfw">Tweets by yufid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
                 
             </div>
         );
