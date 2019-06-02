@@ -2,10 +2,7 @@ import React, { Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { FacebookProvider, Page } from 'react-facebook';
-
-// import {FacebookProvider, EmbeddedPost, Share} from 'react-facebook';
-// import {FBEmbedPost} from 'facebook-plugins';
+import { FacebookProvider, Page, ShareButton } from 'react-facebook';
 
 class ContactUs extends Component{
     render(){
@@ -24,30 +21,41 @@ class ContactUs extends Component{
                     <h4>Email :</h4>
                 </div>
                 <div>
-                <FacebookProvider appId='123456789'>
-                    <Page href="https://www.facebook.com/" tabs="timeline" />
-                </FacebookProvider>
-                </div>
-                           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnuha.adinata&tabs=timeline&width=500&height=0&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="200" 
-                    height="200" 
-                    // style="border:none;overflow:hidden" 
-                    scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                 <div>
-                <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                </iframe>
+                    <FacebookProvider appId='371609700138968'>
+                        <Page href="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4" tabs="timeline" />
+                    </FacebookProvider>
                 </div>
                 <div>
-                    <iframe width='230' height= '230'
-                        src="https://www.facebook.com/nuha.adinata">
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.3&appId=371609700138968&autoLogAppEvents=1"></script>
+                    <div class="fb-page" 
+                        data-href="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4" 
+                        data-tabs="timeline" 
+                        data-width="300" 
+                        data-height="250" 
+                        data-small-header="false" 
+                        data-adapt-container-width="true" 
+                        data-hide-cover="false" 
+                        data-show-facepile="true">
+                        <blockquote 
+                            cite="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4"
+                        >
+                            Radio Rodja 756 AM
+                            </a></blockquote></div>
+                </div>
+                <div>
+                    <FacebookProvider appId="371609700138968">
+                        <ShareButton href="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4">
+                        Share
+                        </ShareButton>
+                    </FacebookProvider>
+                </div>
+                 <div>
+                    <iframe width="354" height="214.16"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
                     </iframe>
                 </div>
-                <div class="fb-page" 
-                    data-href="https://www.facebook.com/facebook"
-                    data-width="380" 
-                    data-hide-cover="false"
-                    data-show-facepile="false"></div>
+                
             </div>
         );
     }
