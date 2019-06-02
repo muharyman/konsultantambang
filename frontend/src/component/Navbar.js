@@ -39,19 +39,18 @@ class Navbar extends Component{
                             </li>
                         </ul>
                         <hr />
-                         <Switch>
-                            {/* <Route exact path='/' component={Home} /> */}
-                            <Route exact path='/gallery' component={Gallery} />
-                            <Route path='/about' component={AboutUs} />
-                        </Switch> 
-
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </div>
                 </nav>
-            </Router>
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/gallery' component={Gallery} />
+                <Route path='/about' component={AboutUs} />
+            </Switch>
+        </Router> 
         );
     }
 }

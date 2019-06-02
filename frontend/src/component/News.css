@@ -63,12 +63,12 @@ h3.h3{text-align:center;padding:1.5em 0em;text-transform:capitalize;font-size:1.
     color: #808080;
     transition: all 0.3s ease 0s;
 }
-.post-slide .post-bar li a:after{
-    content: ",";
+/* .post-slide .post-bar li a:after{
+    content: " ";
 }
 .post-slide .post-bar li a:last-child:after{
-    content: "";
-}
+    content: " ";
+} */
 .post-slide .post-bar li a:hover{
     color: #3d3030;
     text-decoration: none;

@@ -18,16 +18,11 @@ class News extends Component{
                             </div>
                             <div className="post-content">
                                 <h3 className="post-title"><a href="#">Judul</a></h3>
-                                <p className="post-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
-                                </p>
                                 <ul className="post-bar">
                                     <li><i className="fa fa-calendar"></i> June 5, 2016</li>
                                     <li>
-                                        <i className="fa fa-folder"></i>
-                                        <a href="#">Mockup</a>
-                                        <a href="#">Graphics</a>
-                                        <a href="#">Flayers</a>
+                                        <i className="fas fa-eye"></i>
+                                        <a href="#">200 views</a>
                                     </li>
                                 </ul>
                                 <a href="#" className="read-more">read more</a>
@@ -39,16 +34,11 @@ class News extends Component{
                             </div>
                             <div className="post-content">
                                 <h3 className="post-title"><a href="#">Judul</a></h3>
-                                <p className="post-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
-                                </p>
                                 <ul className="post-bar">
                                     <li><i className="fa fa-calendar"></i> June 7, 2016</li>
                                     <li>
-                                        <i className="fa fa-folder"></i>
-                                        <a href="#">Mockup</a>
-                                        <a href="#">Graphics</a>
-                                        <a href="#">Flayers</a>
+                                        <i className="fas fa-eye"></i>
+                                        <a href="#">200 views</a>
                                     </li>
                                 </ul>
                                 <a href="#" className="read-more">read more</a>
@@ -60,16 +50,11 @@ class News extends Component{
                             </div>
                             <div className="post-content">
                                 <h3 className="post-title"><a href="#">Judul</a></h3>
-                                <p className="post-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
-                                </p>
                                 <ul className="post-bar">
                                     <li><i className="fa fa-calendar"></i> June 5, 2016</li>
                                     <li>
-                                        <i className="fa fa-folder"></i>
-                                        <a href="#">Mockup</a>
-                                        <a href="#">Graphics</a>
-                                        <a href="#">Flayers</a>
+                                        <i className="fas fa-eye"></i>
+                                        <a href="#">200 views</a>
                                     </li>
                                 </ul>
                                 <a href="#" className="read-more">read more</a>
@@ -84,10 +69,8 @@ class News extends Component{
                                 <ul className="post-bar">
                                     <li><i className="fa fa-calendar"></i> June 5, 2016</li>
                                     <li>
-                                        <i className="fa fa-folder"></i>
-                                        <a href="#">Mockup</a>
-                                        <a href="#">Graphics</a>
-                                        <a href="#">Flayers</a>
+                                        <i className="fas fa-eye"></i>
+                                        <a href="#">200 views</a>
                                     </li>
                                 </ul>
                                 <a href="#" className="read-more">read more</a>

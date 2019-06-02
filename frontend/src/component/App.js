@@ -13,7 +13,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-       <Router>
+            <Router>
                 <nav className=" navbar fixed-top navbar-expand-lg navbar-light bg-dark">
                     <a className="navbar-brand" href="">
                     <img className="logo" src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwizquXdh6fiAhUQP6wKHaw-CWcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.mongabay.co.id%2F2018%2F09%2F12%2Fgubernur-baru-ntt-janjikan-moratorium-tambang-akankah-terwujud%2F&psig=AOvVaw0TT9PoF6C9vMyjMAYD-dXU&ust=1558336965063429"/>
@@ -47,10 +47,10 @@ class App extends Component {
                         </form>
                     </div>
                 </nav>
-              <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/gallery' component={Gallery} />
-                  <Route path='/about' component={AboutUs} />
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/gallery' component={Gallery} />
+                    <Route path='/about' component={AboutUs} />
             </Switch>
             </Router> 
       </div>
