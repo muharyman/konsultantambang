@@ -8,6 +8,7 @@ import Footer from './Footer';
 import ProductSection from './ProductSection';
 import News from './News';
 import ContactUs from './ContactUs';
+import UploadPhoto from './UploadPhoto';
 class Home extends Component{
     render(){
         return(
@@ -22,6 +23,7 @@ class Home extends Component{
                         <ContactUs/>
                     </div>
                 </div>
+                <UploadPhoto/>
                 <Footer/>
             </div>
         );  

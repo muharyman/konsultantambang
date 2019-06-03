@@ -9,6 +9,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Gallery from './Gallery';
 import AboutUs from './AboutUs';
+// import GalleryAdmin from './GalleryAdmin';
 class App extends Component {
   render(){
     return (

@@ -96,7 +96,7 @@ h3.h3{text-align:center;padding:1.5em 0em;text-transform:capitalize;font-size:1.
 .add-perizinan{
     margin-bottom:1vh;
 }
-
+/************ ADMIN ********************/
 .post-slide .post-img .social{padding:0;margin:0;list-style:none;position:absolute;z-index:1}
 .post-slide .post-img .social li{opacity:0;transform:translateY(3px);transition:all .5s ease 0s}
 .post-slide:hover .post-img .social li{margin:0 0 10px;opacity:1;transform:translateY(0)}
@@ -105,3 +105,35 @@ h3.h3{text-align:center;padding:1.5em 0em;text-transform:capitalize;font-size:1.
 .post-slide:hover .post-img .social li:nth-child(3){transition-delay:.4s}
 .post-slide .post-img .social li a{color:grey;font-size:17px;line-height:40px;text-align:center;height:40px;width:40px;border:1px solid grey;display:block;transition:all .5s ease-in-out}
 .post-slide .post-img .social li a:hover{color:#000;border-color:#000}
+/************      ********************/
+
+/************ ADMIN FORM ********************/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}
+
+textarea{
+    resize: none;
+    overflow-y:scroll;    
+    height:100px;
+}
