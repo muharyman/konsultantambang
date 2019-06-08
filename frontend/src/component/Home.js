@@ -9,6 +9,7 @@ import ProductSection from './ProductSection';
 import News from './News';
 import ContactUs from './ContactUs';
 import UploadPhoto from './UploadPhoto';
+import AddNewsForm from './AddNewsForm';
 class Home extends Component{
     render(){
         return(
@@ -17,7 +18,7 @@ class Home extends Component{
                 <ProductSection/>
                 <div className="row">
                     <div className="col-md-8">
-                        <News/>
+                        <AddNewsForm/>
                     </div>
                     <div className="col-md-4">
                         <ContactUs/>
