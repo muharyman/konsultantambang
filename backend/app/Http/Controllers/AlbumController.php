@@ -64,7 +64,7 @@ class AlbumController extends Controller
 
     public function update(Request $request, $id)
     {
-        $album = Album::findOrFail($id);
+        $album = Album::find($id);
         if ($album) {
             if ($request->hasFile('album-photo')) {
                 $this->validate($request, [

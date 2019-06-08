@@ -25,7 +25,7 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::find($id);
         if ($article) {
             $article->view = $article->view + 1;
             $article->save();
@@ -70,7 +70,7 @@ class ArticleController extends Controller
 
     public function update(Request $request, $id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::find($id);
         if ($article) {
             if ($request->hasFile('article-photo')) {
                 $this->validate($request, [
