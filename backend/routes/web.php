@@ -15,25 +15,27 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'admin'], function () use ($router) { 
+$router->group(['prefix' => 'api'], function () use ($router) { 
+    $router->group(['prefix' => 'admin'], function () use ($router) { 
+        $router->group(['prefix' => 'album'], function () use ($router) { 
+            $router->post('/create', 'AlbumController@create');
+            $router->post('/update/{id}', 'AlbumController@update');
+            $router->delete('/delete/{id}', 'AlbumController@destroy');
+        });
+        $router->group(['prefix' => 'article'], function () use ($router) { 
+            $router->post('/create', 'ArticleController@create');
+            $router->post('/update/{id}', 'ArticleController@update');
+            $router->delete('/delete/{id}', 'ArticleController@destroy');
+        });
+    });
+
     $router->group(['prefix' => 'album'], function () use ($router) { 
-        $router->post('/create', 'AlbumController@create');
-        $router->post('/update/{id}', 'AlbumController@update');
-        $router->delete('/delete/{id}', 'AlbumController@destroy');
+        $router->get('/', 'AlbumController@index');
+        $router->get('/{id}', 'AlbumController@show');
     });
+
     $router->group(['prefix' => 'article'], function () use ($router) { 
-        $router->post('/create', 'ArticleController@create');
-        $router->post('/update/{id}', 'ArticleController@update');
-        $router->delete('/delete/{id}', 'ArticleController@destroy');
+        $router->get('/', 'ArticleController@index');
+        $router->get('/{id}', 'ArticleController@show');
     });
-});
-
-$router->group(['prefix' => 'album'], function () use ($router) { 
-    $router->get('/', 'AlbumController@index');
-    $router->get('/{id}', 'AlbumController@show');
-});
-
-$router->group(['prefix' => 'article'], function () use ($router) { 
-    $router->get('/', 'ArticleController@index');
-    $router->get('/{id}', 'ArticleController@show');
 });
