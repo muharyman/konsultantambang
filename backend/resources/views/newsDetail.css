@@ -1,0 +1,9 @@
+body{
+    margin-top: 15vh;
+}
+.post-content{
+    display: inline-block;
+}
+.post-bar li {
+    display: inline-block;
+}

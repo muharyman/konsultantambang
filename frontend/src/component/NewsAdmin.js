@@ -18,12 +18,12 @@ class News extends Component{
                     <div className="row">
                         <div className="post-slide">
                             <div className="post-img">
-                                <a href="#"><img src="http://bestjquery.com/tutorial/news-slider/demo33/images/img-1.jpg" alt=""/></a>
                                 <ul class="social">
                                     <li><a href="" class="fa fa-search"></a></li>
                                     <li><a href="" class="fa fa-shopping-bag"></a></li>
                                     <li><a href="" class="fa fa-shopping-cart"></a></li>
                                 </ul>
+                                <a href="#"><img src="http://bestjquery.com/tutorial/news-slider/demo33/images/img-1.jpg" alt=""/></a>
                             </div>
                             <div className="post-content">
                                 <h3 className="post-title"><a href="#">Judul</a></h3>
