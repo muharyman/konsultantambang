@@ -14,14 +14,14 @@ class AlbumController extends Controller
 
     public function index()
     {
-        return view('home');
-        // $albums = Album::select('id', 'path', 'desc')->get();
-        // if (count($albums)) {
-        //     return $albums;
-        // }
-        // else {
-        //     return 0;
-        // }
+        return view('album');
+        $albums = Album::select('id', 'path', 'desc')->get();
+        if (count($albums)) {
+            return $albums;
+        }
+        else {
+            return 0;
+        }
     }
 
     public function show($id)

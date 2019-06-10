@@ -15,13 +15,13 @@ class ArticleController extends Controller
     public function index()
     {
         return view('home');
-        // $articles = Article::get();
-        // if (count($articles)) {
-        //     return view('home');
-        // }
-        // else {
-        //     return 0;
-        // }
+        $articles = Article::get();
+        if (count($articles)) {
+            return view('home');
+        }
+        else {
+            return 0;
+        }
     }
 
     public function show($id)
