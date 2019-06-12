@@ -13,31 +13,9 @@
     <link rel="stylesheet" href="newsDetail.css">
 </head>
 <body>
-	<header> 
-        <nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
-            <img class="navbar-brand align-self-center" src="http://acmsocc.github.io/2016/assets/img/googlelogo_color_324x112dp.png" id="logo_custom" width="10%"  alt="logo">
-            <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-            <div class="collapse navbar-collapse " id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><b>Beranda</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/gallery"><b>Foto Kegiatan</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about"><b>Tentang Kami</b></a>
-                    </li>  
-                </ul>
-                <form action="/search" method="post" class="form-inline my-2 mylg-0">
-					<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search" style="color:#0098A8">
-					<button class="btn btn-outline-primary" type="submit" name="submit" style="color:#0098A8">search</button>
-				</form>
-            </div>  
-        </nav>
-    </header><br>
+	<!-- NAVBAR -->
+    @include('adminNavbar');
+    <!-- END NAVBAR -->
     <!-- DETAIL BERITA DAN CONTACT US -->
 	<div class="container-fluid">
         <div class="row">

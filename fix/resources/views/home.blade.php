@@ -13,12 +13,11 @@
 </head>
 <body>
     <!-- NAVBAR-->
-        extends('navbar');
+    @include('navbar');
     <!-- END NAVBAR -->
-    <!--CAROUSEL-->
-        <!-- isi dengan carousel nama filenye carousel.blade.php-->
+	<!--CAROUSEL-->
+	@include('carousel');
     <!--END CAROUSEL-->
-
 	<!-- PENGURUSAN IZIN DAN CONTACT US -->
 	<div class="container-fluid">
 		<div class="row">
@@ -100,15 +99,40 @@
 				</div>
 			</div><!--END PENGURUSAN IZIN-->
 			<!--CONTACT US-->
-                <!-- isi dengan contact us dengan nama file contactUs.blade.php-->
-            <!--END CONTACT US-->
+			<div class="col-md-4">
+				<div class="container">
+					<div class="title-2 text-left">
+						<h3>Contact Us</h3>
+						<hr/>
+					</div>
+					<!--query nilai contact person-->
+					<div class="contact-person">
+						<h6>Contact Person :098343743347 - Adasda</h6>
+					</div>
+					<!--query nilai email-->
+					<div class="contact-person">
+						<h6>Email :</h6>
+					</div>
+					<!--cukup query nilai src facebooknya aja-->
+					<div class="facebook-widget">
+						<div id="fb-root"></div>
+						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.3&appId=133849539992596&autoLogAppEvents=1"></script>
+						<div class="fb-page" 
+							data-tabs="timeline,events,messages"
+							data-href="https://www.facebook.com/radiorodja.rodjatv/?eid=ARCSjSP54MHjJ9L-7oCqUvYJv9V0HRqIQimrMRfbYEAP9vsVrr3wxmiAELYKcYUpRUj8aJmd7dr17Om4"
+							data-width="380" 
+							data-hide-cover="false">
+						</div>
+					</div>
+				</div>
+			</div><!--END CONTACT US-->
 		</div>
-    </div><!--END PENGURUSAN IZIN DAN CONTACT US-->
+	</div><!--END PENGURUSAN IZIN DAN CONTACT US-->
 
     <button class="btn-floating btn-success btn-lg fixed-bottom " style="left:85%;margin:40px; width: 60px; height: 60px;"><i class="fab fa-whatsapp"></i></button>
 
     <!--FOOTER-->
-        <!-- isi dengan footer nama file footer.blade.php-->
+    	@include('footer');
 	<!-- END FOOTER-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

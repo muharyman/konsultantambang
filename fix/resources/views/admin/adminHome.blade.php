@@ -12,75 +12,15 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-	<header> 
-        <nav class="navbar fixed-top navbar-expand-md custom-navbar navbar-dark">
-            <img class="navbar-brand align-self-center" src="http://acmsocc.github.io/2016/assets/img/googlelogo_color_324x112dp.png" id="logo_custom" width="10%"  alt="logo">
-            <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><b>Beranda</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/gallery"><b>Foto Kegiatan</b></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about"><b>Tentang Kami</b></a>
-                    </li>  
-                </ul>
-                <form action="/search" method="post" class="form-inline my-2 mylg-0">
-					<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search" style="color:#0098A8">
-					<button class="btn btn-outline-primary" type="submit" name="submit" style="color:#0098A8">search</button>
-				</form>
-            </div>  
-        </nav>
-    </header><br>
-    <div class="container-fluid image-carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <!--query dari gambar 1 sampe 3 aja tapi triknya coba yang pertama liat ada tulisan activenya 
-                jadi kalo gk mau report yang satu fix yang gambar kedua baru di for-->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="kucing1.jpeg" width="600" height="500" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ayam</h5>
-                        <p>...</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="kucing2.jpeg" width="600" height="500" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ayam</h5>
-                        <p>...</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img  class="d-block w-100" src="kucing3.jpeg" width="600" height="500" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ayam</h5>
-                        <p>...</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div><br><!--END CAROUSEL-->
+    <!-- NAVBAR -->
+    	@include('adminNavbar');
+    <!-- END NAVBAR -->
 
-	<!-- PENGURUSAN IZIN DAN CONTACT US -->
+    <!-- CAROUSEL -->
+        @include('./carousel');
+    <!-- END CAROUSEL -->
+    
+    <!-- PENGURUSAN IZIN DAN CONTACT US -->
 	<div class="container-fluid">
 		<div class="row">
 			<!--PENGURUSAN IZIN -->
@@ -210,63 +150,9 @@
 		</div>
 	</div><!--END PENGURUSAN IZIN DAN CONTACT US-->
 
-	<!--FOOTER-->
-	<div class="footer">
-		<!-- Footer -->
-		<footer class="page-footer font-small cyan darken-2">
-
-		  <!-- Footer Elements -->
-		  <div class="container">
-
-		    <!-- Grid row-->
-		    <div class="row">
-		      <!-- Grid column -->
-		      <div class="col-md-12 py-1">
-		        <div class="mb-3 flex-center">
-                    <!--query nilai masing2-->
-		            <!-- Facebook -->
-		            <button type="button" class="btn btn-fb" href="/">
-                        <i class="fab fa-facebook-f pr-1"></i>
-                        <span>Facebook</span>
-                    </button>
-                    <!-- Twitter -->
-                    <button type="button" class="btn btn-tw" href="/">
-                        <i class="fab fa-twitter pr-1"></i>
-                        <span>Twitter</span>
-                    </button>
-		            <!-- Google +-->
-                    <button type="button" class="btn btn-gplus" href="/">
-                        <i class="fab fa-google-plus-g pr-1"></i>
-                        <span>Google+</span>
-                    </button>
-		            <!--Linkedin -->
-                    <button type="button" class="btn btn-li" href="/">
-                        <i class="fab fa-linkedin-in pr-1"></i>
-                        <span>Linkedin</span>
-                    </button>
-		          <!--Instagram-->
-                    <button type="button" class="btn btn-ins" href="/">
-                        <i class="fab fa-instagram pr-1"></i>
-                        <span>Instagram</span>
-                    </button>
-		        </div>
-		      </div>
-		      <!-- Grid column -->
-
-		    </div>
-		    <!-- Grid row-->
-
-		  </div>
-		  <!-- Footer Elements -->
-
-		  <!-- Copyright -->
-		  <div class="footer-copyright text-center py-1">© 2019 Copyright:
-		    <a href="https://mdbootstrap.com/education/bootstrap/"> Konsultan Tambang</a>
-		  </div>
-		  <!-- Copyright -->
-
-		</footer><!-- Footer -->
-    </div><!-- END FOOTER-->
+    <!-- FOOTER -->
+        @include('./footer');
+    <!-- END FOOTER-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

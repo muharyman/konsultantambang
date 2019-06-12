@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-	 <!-- NAVBAR-->
-        <!-- isi dengan navbar  nama filenya Adminnavbar.blade.php-->
+	<!-- NAVBAR -->
+    @include('adminNavbar');
     <!-- END NAVBAR -->
 
     <div class="container-fluid">
