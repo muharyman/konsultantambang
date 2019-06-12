@@ -12,12 +12,15 @@
 */
 
 Route::get('/', 'ArticleController@index');
-Route::get('/gallery', 'AlbumController@index');
+Route::get('/add-article', 'ArticleController@addform');
+Route::post('/post-add-article', 'ArticleController@create');
 
-// masih pakai direct function dulu
-Route::get('/add-article', function() {
-    return view('admin.add-article');
-});
+Route::get('/gallery', 'AlbumController@index');
+Route::get('/admin-album', 'AlbumController@admin');
+Route::get('/add-album', 'AlbumController@addform');
+Route::post('/post-add-album', 'AlbumController@create');
+Route::get('/edit-album/{id}', 'AlbumController@editform');
+Route::post('/post-edit-album/{id}', 'AlbumController@update');
 
 Route::get('/about', function() {
     return view('about');

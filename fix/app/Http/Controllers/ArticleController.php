@@ -38,8 +38,14 @@ class ArticleController extends Controller
         }
     }
 
+    public function addform()
+    {
+        return view('admin.add-article');
+    }
+    
     public function create(Request $request)
     {
+        dd($request->input('froala-editor'));
         if ($request->hasFile('article-photo')) {
             $this->validate($request, [
                 'article-photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4096',

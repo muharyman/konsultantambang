@@ -7,32 +7,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="add-edit-photo.css">
-    <script src="add-edit-photo.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/add-edit-photo.css') }}">
+    <script src="{{ asset('js/add-edit-photo.js') }}"></script>
 </head>
 <body>
 	<!-- NAVBAR -->
-    @include('adminNavbar');
+    @include('navbar');
     <!-- END NAVBAR -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <h5 class="align-self-center " style="margin-top:11px;margin-left:10px">Edit Foto</h5>
+                <h5 class="align-self-center " style="margin-top:11px;margin-left:10px">Tambah Foto</h5>
             </div>
         </div>
         <hr>
     </div>
-    <div class="editPhoto">
+    <div class="addPhoto">
         <div class="container">
-            <form action="/">
+            <form action="/post-add-album" method="post" name="addAlbum" enctype="multipart/form-data">
+            {{ csrf_field() }}
                 <div class="form-group">
                     <label style="margin-left: 10px;">Upload Image</label>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file">
-                                Browse… <input type="file" id="imgInp">
+                                Browse… <input type="file" id="imgInp" name="album-photo">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
@@ -40,7 +41,7 @@
                     <img id='img-upload'/>
                     <label style="margin-left: 9px;">Caption</label>
                     <div class="input-group">
-                        <textarea name="caption" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"></textarea>
+                        <textarea name="album-desc" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
@@ -50,7 +51,7 @@
                             <button type="delete" class="btn btn-warning btn-md"><i class="fas fa-ban pl-1"></i><strong> DELETE</strong></button>
                         </div>
                         <div class="col-md-4 text-right">
-                            <button type="submit" class="btn btn-dark-green btn-md"><strong>SAVE </strong><i class="fas fa-check pl-1"></i></button>
+                            <button type="submit" class="btn btn-dark-green btn-md"><strong>ADD </strong><i class="fas fa-check pl-1"></i></button>
                         </div>
                     </div>
                 </div>

@@ -35,6 +35,21 @@ class AlbumController extends Controller
         }
     }
 
+    public function admin()
+    {
+        return view('admin.album');
+    }
+
+    public function addform()
+    {
+        return view('admin.add-album');
+    }
+
+    public function editform($id)
+    {
+        return view('admin.edit-album');
+    }
+
     public function create(Request $request)
     {
         if ($request->hasFile('album-photo')) {
@@ -52,14 +67,14 @@ class AlbumController extends Controller
             $album->desc = $request->input('album-desc'); 
             
             if ($album->save()) {
-                return 1;
+                return view('admin.album');
             }
             else {
-                return 0;
+                return view('admin.add-album');
             }
         }
         else {
-            return 0;
+            return view('admin.add-album');
         }
     }
 

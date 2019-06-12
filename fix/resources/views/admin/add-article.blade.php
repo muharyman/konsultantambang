@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- NAVBAR -->
-    @include('adminNavbar');
+    @include('admin.navbar');
     <!-- END NAVBAR -->
     <div class="container-fluid">
         <div class="row">
@@ -31,7 +31,8 @@
     </div>
     <div class="tambahIzin">
         <div class="container">
-            <form action="/">
+            <form action="post-add-article" method="post" name="addArticle" enctype="multipart/form-data">
+            {{ csrf_field() }}
                 <div class="form-group">
                     <label style="margin-left: 10px;">Judul Perizinan</label>
                     <div class="input-group">
@@ -39,7 +40,7 @@
                     </div><br>
                     <label style="margin-left: 10px;">Isi Perizinan</label>
                     <div class="input-group">
-                        <textarea id="froala-editor"></textarea>
+                        <textarea id="froala-editor" name="froala-editor"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
