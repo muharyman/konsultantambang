@@ -1,3 +1,25 @@
 body{
     margin-top:15vh;
+    padding-right: 0 !important;
 }
+
+/************ ADMIN ********************/
+.col-md-2  .social{padding:0;margin-top:25px; margin-left:10px;list-style:none;position:absolute;z-index:1;}
+.col-md-2 .social li{opacity:0;transform:translateY(3px);transition:all .5s ease 0s}
+.col-md-2:hover .social li{margin:0 0 10px;opacity:1;transform:translateY(0);color:grey !important;}
+.col-md-2:hover .social li:nth-child(1){transition-delay:.1s}
+.col-md-2:hover .social li:nth-child(2){transition-delay:.2s}
+.col-md-2 .social li a{color:grey !important; font-size:17px;line-height:40px;text-align:center;height:40px;width:40px;border:1px solid grey;display:block;transition:all .5s ease-in-out}
+.col-md-2 .social li a:hover{color:grey;border-color:grey}
+
+
+.carousel-inner .carousel-item .social{padding:0;margin-top:25px; margin-left:10px;list-style:none;position:absolute;z-index:1;}
+.carousel-inner .carousel-item .social li{opacity:0;transform:translateY(3px);transition:all .5s ease 0s}
+.carousel-inner:hover .carousel-item .social li{margin:0 0 10px;opacity:1;transform:translateY(0);color:grey !important;}
+.carousel-inner:hover .carousel-item .social li:nth-child(1){transition-delay:.1s}
+.carousel-inner:hover .carousel-item .social li:nth-child(2){transition-delay:.2s}
+.carousel-inner .carousel-item .social li a{color:grey !important; font-size:17px;line-height:40px;text-align:center;height:40px;width:40px;border:1px solid grey;display:block;transition:all .5s ease-in-out}
+.carousel-inner .carousel-item .social li a:hover{color:grey;border-color:grey}
+
+
+/************      ********************/

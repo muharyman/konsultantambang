@@ -24,10 +24,10 @@
                         <a class="nav-link" href="/"><b>Beranda</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Admingallery"><b>Foto Kegiatan</b></a>
+                        <a class="nav-link" href="/admin-album"><b>Foto Kegiatan</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Adminabout"><b>Tentang Kami</b></a>
+                        <a class="nav-link" href="/admin-about"><b>Tentang Kami</b></a>
                     </li>  
                 </ul>
                 <form action="/search" method="post" class="form-inline my-2 mylg-0">

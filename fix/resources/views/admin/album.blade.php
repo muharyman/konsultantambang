@@ -7,13 +7,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/gallery.css') }}">
 </head>
 <body>
 	<!-- NAVBAR -->
-    @include('navbar');
+    @include('admin.navbar');
     <!-- END NAVBAR -->
 
     <div class="container-fluid">
@@ -32,9 +32,17 @@
             <div class="row">
                 <!--for each semua gambar-->
                 <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="0"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1" class="img-thumbnail my-3"/></a>
+                    <ul class="social">
+                            <li><a href="" class="fas fa-edit"></a></li>
+                            <li><a href="" class="fas fa-trash"></a></li>
+                    </ul>
+                    <a href="#lightbox" data-slide-to="0"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1" class="img-thumbnail my-3"/></a>
                 </div>
                 <div class="col-md-2" data-toggle="modal" data-target="#modal">
+                    <ul class="social">
+                        <li><a href="" class="fas fa-edit"></a></li>
+                        <li><a href="" class="fas fa-trash"></a></li>
+                    </ul>
                 <a href="#lightbox" data-slide-to="1"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+2" class="img-thumbnail my-3"/></a>
                 </div>
                 <div class="col-md-2" data-toggle="modal" data-target="#modal">
@@ -109,12 +117,20 @@
                                 <!--for each semua gambar beserta captionnya dibagian <p>..</p>
                                 catatan: liat di slide pertama ada bagian activenya-->
                                 <div class="carousel-item active">
+                                    <ul class="social">
+                                        <li><a href="" class="fas fa-edit"></a></li>
+                                        <li><a href="" class="fas fa-trash"></a></li>
+                                    </ul>
                                     <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+1" class="w-100" height="400px" width="600px" alt="">
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>...</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
+                                    <ul class="social">
+                                        <li><a href="" class="fas fa-edit"></a></li>
+                                        <li><a href="" class="fas fa-trash"></a></li>
+                                    </ul>
                                     <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+2" class="w-100" height="400px" width="600px" alt="">
                                     <div class="carousel-caption d-none d-md-block">
                                         <p>...</p>
@@ -214,7 +230,7 @@
         </div>
     </div>
 	<!--FOOTER-->
-        <!-- isi dengan footer nama file footer.blade.php-->
+        @include('footer');
 	<!-- END FOOTER-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
