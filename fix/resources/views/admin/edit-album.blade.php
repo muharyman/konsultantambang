@@ -26,13 +26,14 @@
     </div>
     <div class="editPhoto">
         <div class="container">
-            <form action="/">
+            <form action="/post-edit-album/<?php echo($album->id); ?>" method="post" name="editAlbum" enctype="multipart/form-data">
+            {{ csrf_field() }}
                 <div class="form-group">
                     <label style="margin-left: 10px;">Upload Image</label>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file">
-                                Browse… <input type="file" id="imgInp">
+                                Browse… <input type="file" name="album-photo" id="imgInp">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
@@ -40,7 +41,7 @@
                     <img id='img-upload'/>
                     <label style="margin-left: 9px;">Caption</label>
                     <div class="input-group">
-                        <textarea name="caption" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"></textarea>
+                        <textarea name="album-desc" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"><?php echo($album->desc); ?></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-4">

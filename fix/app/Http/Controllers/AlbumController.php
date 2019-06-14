@@ -51,7 +51,11 @@ class AlbumController extends Controller
 
     public function editform($id)
     {
-        return view('admin.edit-album');
+        $album = Album::select('id', 'path', 'desc')->where('id', $id)->first();
+        return view(
+            'admin.edit-album',
+            ['album' => $album]
+        );
     }
 
     public function create(Request $request)
@@ -121,9 +125,7 @@ class AlbumController extends Controller
 
     public function destroy($id)
     {
-        $result = Album::destroy($id);
-        
-        // return 1 mean successful to delete and return 0 means failed
-        return $result;
+        Album::destroy($id);
+        return redirect('/admin-album');
     }
 }

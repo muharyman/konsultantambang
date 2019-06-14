@@ -21,6 +21,7 @@ Route::get('/add-album', 'AlbumController@addform');
 Route::post('/post-add-album', 'AlbumController@create');
 Route::get('/edit-album/{id}', 'AlbumController@editform');
 Route::post('/post-edit-album/{id}', 'AlbumController@update');
+Route::get('/delete-album/{id}', 'AlbumController@destroy');
 
 Route::get('/about', function() {
     return view('about');
