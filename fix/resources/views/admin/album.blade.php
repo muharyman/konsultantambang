@@ -22,7 +22,7 @@
                 <h5 class="align-self-center " style="margin-top:11px;margin-left:10px">Foto Kegiatan</h5>
             </div>
             <div class="col-md-6">
-                <a role="button" href="/" class="btn btn-rounded btn-dark-green btn-sm" style="float:right;margin-right: 40px;">tambah foto<i class="fas fa-plus pl-1"></i></a>
+                <a role="button" href="/add-album" class="btn btn-rounded btn-dark-green btn-sm" style="float:right;margin-right: 40px;">tambah foto<i class="fas fa-plus pl-1"></i></a>
             </div>
         </div>
         <hr>
@@ -30,63 +30,15 @@
     <div class="gallery">
         <div class="container-fluid">
             <div class="row">
-                <!--for each semua gambar-->
+                @foreach($albums as $key => $album)
                 <div class="col-md-2" data-toggle="modal" data-target="#modal">
                     <ul class="social">
-                            <li><a href="" class="fas fa-edit"></a></li>
-                            <li><a href="" class="fas fa-trash"></a></li>
+                            <li><a href="/edit-album/<?php echo($album->id); ?>"  class="fas fa-edit"></a></li>
+                            <li><a href="/delete-album/<?php echo($album->id); ?>" class="fas fa-trash"></a></li>
                     </ul>
-                    <a href="#lightbox" data-slide-to="0"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+1" class="img-thumbnail my-3"/></a>
+                    <a href="#lightbox" data-slide-to="<?php echo($key); ?>"><img src="{{ asset('images/') }}/<?php echo($album->path); ?>" class="img-thumbnail my-3"/></a>
                 </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                    <ul class="social">
-                        <li><a href="" class="fas fa-edit"></a></li>
-                        <li><a href="" class="fas fa-trash"></a></li>
-                    </ul>
-                <a href="#lightbox" data-slide-to="1"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+2" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="2"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+3" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="3"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+4" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="4"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+5" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="5"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+6" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="6"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+7" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="7"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+8" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="8"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+9" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="9"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+10" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="10"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+11" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="11"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+12" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="12"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+13" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="13"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+14" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="14"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+15" class="img-thumbnail my-3"/></a>
-                </div>
-                <div class="col-md-2" data-toggle="modal" data-target="#modal">
-                <a href="#lightbox" data-slide-to="15"><img src="https://dummyimage.com/160x120/000000/fff.png&text=Photo+16" class="img-thumbnail my-3"/></a>
-                </div>    
+                @endforeach
             </div>
         </div>
         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Lightbox Gallery by Bootstrap 4" aria-hidden="true">
@@ -95,131 +47,27 @@
                     <div class="modal-body">
                         <div id="lightbox" class="carousel slide" data-ride="carousel" data-interval="5000" data-keyboard="true">
                             <ol class="carousel-indicators">
-                                <!--for each semua gambar-->
-                                <li data-target="#lightbox" data-slide-to="0"></li>
-                                <li data-target="#lightbox" data-slide-to="1"></li>
-                                <li data-target="#lightbox" data-slide-to="2"></li>
-                                <li data-target="#lightbox" data-slide-to="3"></li>
-                                <li data-target="#lightbox" data-slide-to="4"></li>
-                                <li data-target="#lightbox" data-slide-to="5"></li>
-                                <li data-target="#lightbox" data-slide-to="6"></li>
-                                <li data-target="#lightbox" data-slide-to="7"></li>
-                                <li data-target="#lightbox" data-slide-to="8"></li>
-                                <li data-target="#lightbox" data-slide-to="9"></li>
-                                <li data-target="#lightbox" data-slide-to="10"></li>
-                                <li data-target="#lightbox" data-slide-to="11"></li>
-                                <li data-target="#lightbox" data-slide-to="12"></li>
-                                <li data-target="#lightbox" data-slide-to="13"></li>
-                                <li data-target="#lightbox" data-slide-to="14"></li>
-                                <li data-target="#lightbox" data-slide-to="15"></li>
+                                @foreach($albums as $key => $album)
+                                <li data-target="#lightbox" data-slide-to="<?php echo($key); ?>"></li>
+                                @endforeach
                             </ol>
                             <div class="carousel-inner">
-                                <!--for each semua gambar beserta captionnya dibagian <p>..</p>
-                                catatan: liat di slide pertama ada bagian activenya-->
+                                @foreach($albums as $key => $album)
+                                @if ($key == 0)
                                 <div class="carousel-item active">
+                                @else
+                                <div class="carousel-item">
+                                @endif
                                     <ul class="social">
                                         <li><a href="" class="fas fa-edit"></a></li>
                                         <li><a href="" class="fas fa-trash"></a></li>
                                     </ul>
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+1" class="w-100" height="400px" width="600px" alt="">
+                                    <img src="{{ asset('images/') }}/<?php echo($album->path); ?>" class="w-100" height="400px" width="600px" alt="">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
+                                        <p><?php echo($album->desc); ?></p>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <ul class="social">
-                                        <li><a href="" class="fas fa-edit"></a></li>
-                                        <li><a href="" class="fas fa-trash"></a></li>
-                                    </ul>
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+2" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+3" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+4" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+5" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+6" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+7" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+8" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+9" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+10" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+11" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+12" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+13" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+14" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+15" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dummyimage.com/1280x1024/000000/fff.png&text=Photo+16" class="w-100" height="400px" width="600px" alt="">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <p>...</p>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <a class="carousel-control-prev" href="#lightbox" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
                             <a class="carousel-control-next" href="#lightbox" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>

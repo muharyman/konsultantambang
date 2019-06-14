@@ -37,7 +37,11 @@ class AlbumController extends Controller
 
     public function admin()
     {
-        return view('admin.album');
+        $albums = Album::select('id', 'path', 'desc')->get();
+        return view(
+            'admin.album', 
+            ['albums' => $albums]
+        );
     }
 
     public function addform()
@@ -67,14 +71,14 @@ class AlbumController extends Controller
             $album->desc = $request->input('album-desc'); 
             
             if ($album->save()) {
-                return view('admin.album');
+                return redirect('/admin-album');
             }
             else {
-                return view('admin.add-album');
+                return redirect('/add-album');
             }
         }
         else {
-            return view('admin.add-album');
+            return redirect('/add-album');
         }
     }
 
@@ -104,14 +108,14 @@ class AlbumController extends Controller
             $album->desc = $request->input('album-desc');
 
             if ($album->save()) {
-                return 1;
+                return redirect('/admin-album');
             }
             else {
-                return 0;
+                return redirect('/edit-album');
             }
         }
         else {
-            return 0;
+            return redirect('/edit-album');
         }
     }
 
