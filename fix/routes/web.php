@@ -12,8 +12,12 @@
 */
 
 Route::get('/', 'ArticleController@index');
+Route::get('/admin', 'ArticleController@admin');
 Route::get('/add-article', 'ArticleController@addform');
 Route::post('/post-add-article', 'ArticleController@create');
+Route::get('/edit-article/{id}', 'ArticleController@editform');
+Route::post('/post-edit-article/{id}', 'ArticleController@update');
+Route::get('/delete-article/{id}', 'ArticleController@destroy');
 
 Route::get('/gallery', 'AlbumController@index');
 Route::get('/admin-album', 'AlbumController@admin');
@@ -29,5 +33,9 @@ Route::get('/about', function() {
 
 Route::get('/admin-about', function() {
     return view('admin.about');
+});
+
+Route::get('/edit-about', function() {
+    return view('admin.edit-about');
 });
 

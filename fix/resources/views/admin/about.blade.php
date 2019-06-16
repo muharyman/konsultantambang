@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-6">
                 <div class="col-md-6 text-right" >
-                    <button href="/" class="btn btn-primary btn-md">EDIT <i class="far fa-edit pl-1"></i></button>
+                    <a href="/edit-about" class="btn btn-primary btn-md">EDIT <i class="far fa-edit pl-1"></i></a>
                 </div>
             </div>
         </div>

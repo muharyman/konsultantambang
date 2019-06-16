@@ -27,21 +27,22 @@
     </div>
     <div class="aboutUs">
         <div class="col-md-10 container">
-            <form action="/">
+            <form action="/post-edit-about" method="post" name="editAbout" enctype="multipart/form-data">
+            {{ csrf_field() }}
                 <div class="form-group">
                     <label style="margin-left: 10px;">Nama Perusahaan</label>
                     <div class="input-group">
-                        <input type="text" id="nama_perusahaan" name="nama_perusahaan">
+                        <input type="text" id="nama_perusahaan" name="name">
                     </div>
                     <label style="margin-left: 10px;">Alamat Perusahaan</label>
                     <div class="input-group">
-                        <input type="text" id="alamat_perusahaan" name="alamat_perusahaan">
+                        <input type="text" id="alamat_perusahaan" name="address">
                     </div>
                     <label style="margin-left: 10px;">Upload Logo Perusahaan</label>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file">
-                                Browse… <input type="file" id="imgInp">
+                                Browse… <input type="file" name="photo" id="imgInp">
                             </span>
                         </span>
                         <input type="text" class="form-control" readonly>
@@ -49,11 +50,11 @@
                     <img id='img-upload'/>
                     <label style="margin-left: 10px;">Profil Perusahaan</label>
                     <div class="input-group">
-                        <textarea name="caption" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"></textarea>
+                        <textarea name="profil" class="form-control" id="caption" style="resize: none;margin-left: 5px;" rows="5" cols="55"></textarea>
                     </div>
                     <label style="margin-left: 10px;">Contact Person</label>
                     <div class="input-group">
-                        <input type="text" id="contact_person" name="contact_person">
+                        <input type="text" id="contact_person" name="contact">
                     </div>
                     <label style="margin-left: 10px;">Email</label>
                     <div class="input-group">
